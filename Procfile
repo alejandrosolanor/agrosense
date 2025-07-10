@@ -1,1 +1,1 @@
-web: gunicorn app:agrosense
+web: gunicorn app:app
