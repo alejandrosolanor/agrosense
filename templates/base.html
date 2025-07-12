@@ -1,28 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Agrosense - Smart Agriculture Assistant</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+  <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="/">Agrosense</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-            <script type="text/javascript">
+<body class="is-preload">
+<script type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
@@ -38,23 +24,55 @@
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
-          </li>
+  <!-- Page Wrapper -->
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+      <h1><a href="/">Agrosense</a></h1>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+        <a href="#" class="close">Close</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="inner">
+        <h2 class="major">Get in touch</h2>
+        <p>Have questions about Agrosense? Reach out to our team.</p>
+        <ul class="contact">
+          <li class="icon solid fa-envelope"><a href="#">contact@agrosense.com</a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Agrosense. All rights reserved.</li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <main class="container my-5">
-    {% block content %}{% endblock %}
-  </main>
+  </div>
 
-  <footer class="bg-dark text-light py-4 mt-auto">
-    <div class="container text-center">
-      <p class="mb-0">© 2025 Agrosense. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
   {% block scripts %}{% endblock %}
 </body>
 </html>
