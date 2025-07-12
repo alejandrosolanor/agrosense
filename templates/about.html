@@ -1,33 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>About AgriBot</h1>
+<h1 class="fw-bold text-success mb-4">About Agrosense</h1>
+
 <div class="row">
-    <div class="col-md-8">
-        <p>AgriBot is an innovative solution that combines robotics and artificial intelligence to provide farmers and gardeners with precise atmospheric and agricultural data for their specific location.</p>
-        
-        <h3 class="mt-4">How It Works</h3>
-        <ol>
-            <li>Our robotic sensors collect real-time data from your fields</li>
-            <li>The data is processed and analyzed</li>
-            <li>You interact with our chatbot to get customized recommendations</li>
-        </ol>
-        
-        <h3 class="mt-4">Our Mission</h3>
-        <p>To empower agricultural producers with data-driven insights that increase yield, reduce waste, and optimize resources.</p>
+  <div class="col-lg-8">
+    <p>Agrosense is a smart agricultural assistant that uses robotics and artificial intelligence to provide hyper-local data insights. Farmers and gardeners get personalized, real-time information to improve productivity and reduce environmental impact.</p>
+
+    <h3 class="mt-4 text-secondary">How It Works</h3>
+    <ol class="ps-3">
+      <li>Robotic sensors collect real-time environmental and soil data.</li>
+      <li>Machine learning models process and interpret the data.</li>
+      <li>The chatbot interface provides actionable insights to the user.</li>
+    </ol>
+
+    <h3 class="mt-4 text-secondary">Our Mission</h3>
+    <p>We aim to empower agricultural producers through technology—boosting yields, reducing waste, and using natural resources more efficiently.</p>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card border-0 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title text-success">Technical Highlights</h5>
+        <ul class="list-unstyled mt-3">
+          <li><i class="bi bi-cpu-fill me-2 text-success"></i>Python-powered backend</li>
+          <li><i class="bi bi-robot me-2 text-success"></i>AI & ML algorithms</li>
+          <li><i class="bi bi-graph-up-arrow me-2 text-success"></i>Real-time analytics</li>
+          <li><i class="bi bi-chat-left-text me-2 text-success"></i>Chatbot UX</li>
+        </ul>
+      </div>
     </div>
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Technical Details</h5>
-                <ul>
-                    <li>Python-powered backend</li>
-                    <li>Machine learning algorithms</li>
-                    <li>Real-time data processing</li>
-                    <li>User-friendly chatbot interface</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 {% endblock %}
