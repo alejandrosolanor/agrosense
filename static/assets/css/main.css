@@ -100,7 +100,7 @@ input, select, textarea {
 
 	body {
 		background-color: #30412e;
-		background-image: linear-gradient(to top, rgba(46, 65, 48, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+		background-image: linear-gradient(to top, rgba(46, 65, 48, 0.8), rgba(46, 65, 50, 0.8)), url("../../images/bg.jpg");
 		background-size: auto,
  cover;
 		background-attachment: fixed,
@@ -2212,7 +2212,7 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #5b6ba6;
+			border-color: #5ba66b;
 		}
 
 	select {
@@ -2320,7 +2320,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #4c5c96;
+			border-color: #4c9661;
 		}
 
 	input[type="checkbox"] + label:before {
