@@ -1,51 +1,103 @@
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.05) 100%); z-index: 1;"></div>
 {% extends "base.html" %}
 
 {% block content %}
 <!-- Banner -->
-<section id="banner">
+
+<section id="banner" class="banner-background" style="position: relative; height: 100vh; display: flex; align-items: center; justify-content: center;">
+  <div class="inner" style="position: relative; z-index: 2;">
+    <div class="logo">
+  <img src="{{ url_for('static', filename='assets/images/agrosense.png') }}" 
+       alt="Agrosense Logo" 
+       id="agrosense-logo" style="position: relative; top: -3cm; left: -5cm; margin-bottom: -1.6cm; filter: drop-shadow(0 0 8px #fff6) drop-shadow(0 0 2px #fff3);">
+    </div>
+  <h2 style="position: relative; top: -3.5cm; left: -3cm; margin-bottom: -1cm; font-size: 2.5em; font-weight: bold; color: #fff; text-shadow: 2px 2px 8px #aaa;">Agrosense</h2>
+  <p style="position: relative; top: calc(-3.2cm - 7px); left: -3cm; margin-bottom: -1cm; font-size: 0.8em; color: #fff; text-shadow: 2px 2px 8px #222;">Sembramos innovación, cocechamos progreso</p>
+  </div>
+
+</section>
+
+
+
+<!-- Features -->
+<section id="two" class="wrapper spotlight style2">
   <div class="inner">
-    <div class="logo"><span class="icon fa-leaf"></span></div>
-    <h2>Agrosense</h2>
-    <p>Your smart assistant for precision agriculture</p>
+    <a href="#" class="image"><img src="{{ url_for('static', filename='assets/images/farmpicanim.png') }}" alt="" /></a>
+    <div class="content">
+      <h2 class="major">Bienvenido a Agrosense!</h2>
+      <p>Agrosense es un asesor meteorologico, agrofinanciero y agropecuario con el fin de ayudar a todos sus usuarios a manejar sus cultivos, actuar de manera prudente a cambios en el mercado, y estar siempre informado para el ambiente climatologico constantemente cambiante en el que vivimos actualmente.</p>
+    </div>
   </div>
 </section>
 
-<!-- Wrapper -->
-<section id="wrapper">
-  <!-- Features -->
-  <section id="one" class="wrapper spotlight style1">
+<!-- Feature Highlights -->
+<section id="four" class="wrapper alt style1">
+  <div class="inner">
+    <h2 class="major">Agrosense puede:</h2>
+    <section class="features">
+      <article>
+        <h3 class="icon solid fa-thermometer-half">Recopilacion Personalizada</h3>
+        <p>Agrobot recopila informacion relevante a agricultores que necesitan informacion precisa.</p>
+      </article>
+      <article>
+        <h3 class="icon solid fa-tint">Informacion Actual y Relevante</h3>
+        <p>Agrosense actualiza su base de datos diariamente para hacer recomendaciones apoyadas por argumentos e informacion actual.</p>
+      </article>
+      <article>
+        <h3 class="icon solid fa-cloud-sun">Precios actualizados</h3>
+        <p>De parte del equipo de agrosense, nos comprometemos a mentener las bases de datos relacionadas a cambios en el mercado actualizadas.</p>
+      </article>
+      <article>
+        <h3 class="icon solid fa-robot">Analisis IA</h3>
+        <p>Agrosense da recomendaciones logicas basadas en contexto y tendencias pasadas para reaccionar a cambios de manera rapida y eficiente.</p>
+      </article>
+    </section>
+  </div>
+</section>
+
+<!-- Real-time Monitoring -->
+<section id="one" class="wrapper spotlight style1" style="position: relative; background-image: url('{{ url_for('static', filename='assets/images/starrynight.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.55); z-index: 1;"></div>
+  <div class="inner" style="position: relative; z-index: 2;">
+  <div class="inner">
+    <div class="content">
+      <h2 class="major">Monitoreo en tiempo real</h2>
+      <p>Agrosense y Agrobot trabajan en conjunto para recopilar datos en base a las necesidades del usuario y los implementa en un contexto nacional para ayudar a sus usuarios a hacer desiciones razonables.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- New Features Section (Placeholder) -->
+  <section id="five" class="wrapper alt style2">
     <div class="inner">
-      <a href="#" class="image"><img src="{{ url_for('static', filename='images/farm.jpg') }}" alt="" /></a>
-      <div class="content">
-        <h2 class="major">Real-time Monitoring</h2>
-        <p>Get accurate real-time data on soil health, temperature, and weather patterns to optimize your farming decisions.</p>
-        <a href="/about" class="special">Learn more</a>
-      </div>
+      <h2 class="major">Mas</h2>
+      <section class="features">
+        <article>
+          <h3 class="icon solid fa-seedling"> A</h3>
+          <p>Desc</p>
+        </article>
+        <article>
+          <h3 class="icon solid fa-water">B</h3>
+          <p>Desc</p>
+        </article>
+        <article>
+          <h3 class="icon solid fa-satellite">C</h3>
+          <p>Desc</p>
+        </article>
+        <article>
+          <h3 class="icon solid fa-chart-line">D</h3>
+          <p>Desc</p>
+        </article>
+      </section>
     </div>
   </section>
 
-  <!-- Feature Highlights -->
-  <section id="four" class="wrapper alt style1">
+  <!-- Call to Action -->
+  <section id="cta" class="wrapper style3">
     <div class="inner">
-      <h2 class="major">Key Features</h2>
-      <section class="features">
-        <article>
-          <h3 class="icon solid fa-thermometer-half">Temperature Monitoring</h3>
-          <p>Accurate real-time readings to optimize sowing and harvesting times.</p>
-        </article>
-        <article>
-          <h3 class="icon solid fa-tint">Soil Moisture</h3>
-          <p>Track moisture levels to enhance irrigation strategies.</p>
-        </article>
-        <article>
-          <h3 class="icon solid fa-cloud-sun">Localized Forecasts</h3>
-          <p>Weather predictions tailored for your fields and crops.</p>
-        </article>
-        <article>
-          <h3 class="icon solid fa-robot">AI Analysis</h3>
-          <p>Machine learning models provide actionable insights.</p>
-        </article>
-      </section>
+      <h2>[Get Started with Agrosense]</h2>
+      <p>[Placeholder for CTA encouraging users to try or contact]</p>
+      <a href="#" class="special">[CTA Button]</a>
     </div>
   </section>
 </section>

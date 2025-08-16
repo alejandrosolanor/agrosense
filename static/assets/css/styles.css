@@ -13,6 +13,27 @@ body {
     border-radius: 18px;
     max-width: 80%;
 }
+/* --- Custom Logo Styling --- */
+#banner .inner .logo::before,
+#banner .inner .logo .icon {
+  content: none !important;
+  display: none !important;
+}
+
+#banner .inner .logo {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  width: auto;
+  height: auto;
+}
+
+#banner .inner .logo .brand-logo-img {
+  display: block;
+  max-width: 300px;  /* adjust size as needed */
+  height: auto;
+  margin: 0 auto;    /* centers the logo */
+}
 
 .user-message {
     background-color: #d1e7dd;
